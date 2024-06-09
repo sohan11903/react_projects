@@ -1,0 +1,241 @@
+body{
+  background-color: black;
+  min-height: 100vh;
+}
+.box{
+  position: relative;
+  max-width: 30rem;
+  max-height: 50rem;
+  background: rgba(0, 0, 0, 75);
+}
+.App{
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 154vh;
+  /* margin: 0px 500px; */
+}
+#home{
+  /* border: 2px solid red; */
+  position: absolute;
+  color: rgb(213, 172, 172);
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  top: 130%;
+  z-index: 2;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.ytname{
+  font-family: valorant;
+}
+.font{
+  font-family: valorant;
+  font-size: 10rem;
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 42px rgb(66, 22, 224),
+    
+    0 0 42px rgb(66, 22, 224),
+    0 0 100px rgb(66, 22, 224);
+    animation: glow 0.11s ease-in-out infinite alternate linear;
+}
+ @keyframes glow {
+  0%{
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(66, 22, 224);
+  }
+  50%{
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 84px rgb(66, 22, 224);
+  }
+  100%{
+    text-shadow: 
+  0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(66, 22, 224);
+  }
+
+  
+} 
+#myVideo {
+ 
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  min-width: 100%;
+  min-height:100% ;
+  z-index: 1;
+  background-color: black;
+
+
+}
+img{
+    width: 0px;  
+}
+.heading{
+ 
+  position: relative;
+  height: 90px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  counter-reset: white;
+  background-color: black;
+  z-index: 3;
+  width: 100%;
+}
+h1{
+  font-family: 'Teko', 'Oswald', sans-serif ;
+  font-weight: bold;
+}
+.card{
+  position: relative;
+  background:linear-gradient(100deg, rgb(42, 60, 192),rgb(199, 177, 239));
+  display: block;
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 50rem;
+  transition: 0.2s;
+  z-index: 4;
+}
+.card::after{
+  filter: blur(40px);
+}
+.white{
+  color: rgb(44, 18, 18);
+  font-weight: bold;
+}
+
+.card:hover{
+  transform: translateY(-0.4rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #4b09bd;
+  /* filter: blur(0px); */
+}
+
+.img{
+  margin-top: 2rem; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.content{
+  margin: 2rem;
+}
+.ytname{
+  font-size: 1.5rem;
+}
+.text{
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .App{
+    display: grid;
+    grid-template-columns: 350px ;
+    justify-content: center;
+  } 
+  #home{
+    
+    position: absolute;
+    color: rgb(213, 172, 172);
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    top: 68%;
+    z-index: 2;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .img1{
+    height: 10px;
+  }
+  .heading
+{
+  position: relative;
+  height: 0px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  counter-reset: white;
+  background-color: black;
+  z-index: 3;
+  width: 100%;
+}
+  #myVideo
+{
+  padding-top: 0px;
+  position: relative;
+  top: 0;
+  height: 450px;
+  margin-top: 0px;
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  z-index: 1;
+  background-color: black;
+}
+  .App{
+    margin-top: 27vh;
+    /* margin: 0px 500px; */
+  }
+}
+@media screen and (max-width: 1068px) and  (min-width: 800px){
+  .App{
+    display: grid;
+    grid-template-columns: 350px 350px ;
+    justify-content: center;
+  } 
+  #home{ 
+    position: absolute;
+    color: rgb(213, 172, 172);
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    top: 105%;
+    z-index: 2;
+    font-size: 55px;
+    font-weight: bold;
+  }
+  .App{
+    margin-top: 124vh;
+    /* margin: 0px 500px; */
+  }
+}
+
+.glow::before,.glow::after{
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg,red,rgb(232, 14, 14),rgb(206, 25, 25),rgb(176, 36, 36),rgb(137, 79, 79),rgb(232, 14, 14));
+  background-size: 400%;
+  width: calc(100%+5px);
+  height: calc(100%+5px);
+  z-index: -1;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.glow::after{
+  filter: blur(40px);
+}
